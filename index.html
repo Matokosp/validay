@@ -7,7 +7,10 @@
     <meta name="description" content="Generemos ambientes limpios y saludables">
     <meta name="keywords" content="">
     <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- OWL CAROUSEL -->
+		<link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css" type="text/css" media="screen" />
     <!-- STYLES -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/laptop.css">
@@ -22,31 +25,281 @@
   	<link href="assets/ico/icon.svg" rel="mask-icon" sizes="any" color="#718696">
   </head>
   <body>
+    <div class="laptop_menu_logo_div laptop">
+      <img class="laptop_menu_logo laptop_menu_logo-white" src="assets/images/xtreme_logo_white.png" alt="">
+      <img class="laptop_menu_logo laptop_menu_logo-color" src="assets/images/xtreme_logo.png" alt="">
+    </div>
+    <div class="hamburger_div">
+      <img class="hamburger_logo" src="assets/images/validay-logo.png" alt="validay">
+      <ul class="hamburger" id="navButton">
+        <li class="hamburger_icon" id="hambIconOne"></li>
+        <li class="hamburger_icon" id="hambIconTwo"></li>
+        <li class="hamburger_icon" id="hambIconThree"></li>
+      </ul>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="#sectionOne">SOMOS</a>
+      <a href="#sectionTwo">TECNOLOGÍA</a>
+      <a href="#sectionThree">PRODUCTOS</a>
+      <a href="#sectionFour">CONTÁCTANOS</a>
+    </nav>
     <main>
-      <img class="header-logo" src="assets/images/validay-logo.png" alt="validay">
-      <h1>Generemos ambientes <br> limpios y saludables</h1>
-      <div class="landing-contact">
-        <a class="contact-item" target="_blank" href="https://wa.me/56963401000">
-          <img class="contact-icons" src="assets/images/whatsapp-icon.png" alt="whatsapp">
-          <p>+569 6340 1000</p>
-        </a>
-        <a class="contact-item" href="mailto:ventas@validay.cl">
-          <img class="contact-icons" src="assets/images/mail-icon.png" alt="mail">
-          <p>ventas@validay.cl</p>
-        </a>
-        <a class="contact-item" href="tel:+569 5372 4136">
-          <img class="contact-icons" src="assets/images/phone-icon.png" alt="phone">
-          <p>+569 5372 4136</p>
-        </a>
-      </div>
+      <header id="sectionOne" class="header">
+        <h1>Generemos ambientes <br>
+          limpios y saludables</h1>
+        <div class="next-section">
+          <img src="assets/images/arrow-down.png" alt="">
+        </div>
+      </header>
+      <section id="sectionTwo" class="somos_section">
+        <div class="somos_text">
+          <h2>Facilitamos productos de <br> limpieza a grandes empresas</h2>
+          <p>Gracias a nuestros proveedores, contamos con una gran cantidad de productos de excelente calidad para cubrir la limpieza en distintas áereas de negocio. Por ejemplo: </p>
+        </div>
+        <div class="rubros">
+          <div class="rubros_item supermercado">
+            <img src="assets/images/super-icon.png" alt="">
+            <h4>Supermercados</h4>
+          </div>
+          <div class="rubros_item hospital">
+            <img src="assets/images/hospital-icon.png" alt="">
+            <h4>Hospitales</h4>
+          </div>
+          <div class="rubros_item retail">
+            <img src="assets/images/retail-icon.png" alt="">
+            <h4>Retail</h4>
+          </div>
+          <div class="rubros_item mineria">
+            <img src="assets/images/mina-icon.png" alt="">
+            <h4>Minería</h4>
+          </div>
+          <div class="rubros_item transporte">
+            <img src="assets/images/tren-icon.png" alt="">
+            <h4>Transporte</h4>
+          </div>
+        </div>
+      </section>
+      <section id="sectionThree" class="tecnologia_section">
+        <div class="tecnologia_left">
+          <h2>Ofrecemos lo último <br>
+          en productos innovadores</h2>
+          <div class="tecnologia_subtitle">
+            <p>Tecnología Nanocobre</p>
+            <div class="tecnologia_subtitle-triangle"></div>
+          </div>
+          <ul class="tecnologia_list">
+            <li class="tecnologia_list_item">
+              <img class="check-list-icon" src="assets/images/check-list.png" alt="">
+              <span>Efectividad por 14 días aprox.</span>
+            </li>
+            <li class="tecnologia_list_item">
+              <img class="check-list-icon" src="assets/images/check-list.png" alt="">
+              <span>Menor costo operacional de limpieza</span>
+            </li>
+            <li class="tecnologia_list_item">
+              <img class="check-list-icon" src="assets/images/check-list.png" alt="">
+              <span>Disrupción de envoltura viral</span>
+            </li>
+            <li class="tecnologia_list_item">
+              <img class="check-list-icon" src="assets/images/check-list.png" alt="">
+              <span>Oxidación de lípidos y proteínas</span>
+            </li>
+            <li class="tecnologia_list_item">
+              <img class="check-list-icon" src="assets/images/check-list.png" alt="">
+              <span>Degradación de material genéticos</span>
+            </li>
+            <li class="tecnologia_list_item">
+              <img class="check-list-icon" src="assets/images/check-list.png" alt="">
+              <span>Inhibición de la infectividad</span>
+            </li>
+            <li class="tecnologia_list_item">
+              <img class="check-list-icon" src="assets/images/check-list.png" alt="">
+              <span>Cambios morfológicos</span>
+            </li>
+          </ul>
+        </div>
+        <div class="tecnologia_right"></div>
+      </section>
+      <section id="sectionFour" class="products_section">
+
+        <div class="product_category nanocobre">
+          <h2 class="product_title">Nanocobre</h2>
+          <div class="owl-carousel owl-theme">
+    				<div class=" product_slide">
+    					<h3 class="product_slide-title">Amonio Decutec</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/decutec.jpg"/>
+              <p class="sku">SKU: NC/AC 1021</p>
+    				</div>
+    				<div class=" product_slide">
+    					<h3 class="product_slide-title">ALCOHOL GEL AIRCOP</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/aircop.jpg"/>
+              <p class="sku">SKU: NC/AH 1022</p>
+    				</div>
+    				<div class=" product_slide">
+    					<h3 class="product_slide-title">MASCARILLAS  REUTILIZABLES</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/mascarillas.jpg"/>
+              <p class="sku">SKU: NC/MR 1023</p>
+    				</div>
+    			</div>
+        </div>
+
+        <div class="product_category accesorios">
+          <h2 class="product_title">Accesorios</h2>
+          <div class="owl-carousel owl-theme">
+    				<div class=" product_slide">
+    					<h3 class="product_slide-title">PISO NOMAD</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/nomad.jpg"/>
+              <p class="sku">SKU: AC/PN 1014</p>
+    				</div>
+    				<div class=" product_slide">
+    					<h3 class="product_slide-title">TÚNEL PEDESTAL</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/pedestal.jpg"/>
+              <p class="sku">SKU: AC/TU 1016</p>
+    				</div>
+    				<div class=" product_slide">
+    					<h3 class="product_slide-title">TÚNEL CARPA</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/carpa.jpg"/>
+              <p class="sku">SKU: AC/TU 1017</p>
+    				</div>
+            <div class=" product_slide">
+    					<h3 class="product_slide-title">LAVAMANOS MÓVILES</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/lavamanos.jpg"/>
+              <p class="sku">SKU: AC/LM 1018</p>
+    				</div>
+            <div class=" product_slide">
+    					<h3 class="product_slide-title">TERMÓMETRO DIGITAL</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/termometro.jpg"/>
+              <p class="sku">SKU: AC/TOM 1019</p>
+    				</div>
+    			</div>
+        </div>
+
+        <div class="product_category insumos">
+          <h2 class="product_title">Insumos</h2>
+          <div class="owl-carousel owl-theme">
+    				<div class=" product_slide">
+    					<h3 class="product_slide-title">AMONIO CUATERNINO CON AROMA (1 lt)</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/amonio.jpg"/>
+              <p class="sku">SKU: IN/AC 1001</p>
+    				</div>
+    				<div class=" product_slide">
+    					<h3 class="product_slide-title">AMONIO CUATERNINO CON AROMA (5 lt)</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/amonio.jpg"/>
+              <p class="sku">SKU: IN/AC 1002</p>
+    				</div>
+    				<div class=" product_slide">
+    					<h3 class="product_slide-title">ALCOHOL GEL</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/alcohol.jpg"/>
+              <p class="sku">SKU: IN/AH 1003</p>
+    				</div>
+            <div class=" product_slide">
+    					<h3 class="product_slide-title">MASCARILLAS REUTILIZABLES</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/mascarillas.jpg"/>
+              <p class="sku">SKU: IN/MR 1004</p>
+    				</div>
+            <div class=" product_slide">
+    					<h3 class="product_slide-title">TEST RÁPIDO</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/test.jpg"/>
+              <p class="sku">SKU: IN/TS 1005</p>
+    				</div>
+            <div class=" product_slide">
+    					<h3 class="product_slide-title">MASCARILLAS DESECHABLES N95</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/mas-desechables.jpg"/>
+              <p class="sku">SKU: IN/MD 1010</p>
+    				</div>
+            <div class=" product_slide">
+    					<h3 class="product_slide-title">MASCARILLAS DESECHABLES 3 PLIEGUES CIVIL</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/mascarilla-civil.jpg"/>
+              <p class="sku">SKU: IN/MD 1010</p>
+    				</div>
+            <div class=" product_slide">
+    					<h3 class="product_slide-title">PANTALLA FACIAL</h3>
+    					<div class="product_slide-division"></div>
+    					<img class="product_slide-img" src="assets/images/pantalla.jpg"/>
+              <p class="sku">SKU: IN/MR 1013</p>
+    				</div>
+    			</div>
+        </div>
+      </section>
+      <section class="respaldados">
+        <h2>Respaldados por innovadores</h2>
+        <div class="respaldo_flex">
+          <img src="assets/images/decotec.png" alt="">
+          <img src="assets/images/aintech.png" alt="">
+        </div>
+      </section>
     </main>
-    <footer class="footer">
+    <footer class="contact_front">
+      <div class="contact_info">
+        <h2 class="contact_info_title">Cotiza tus productos</h2>
+        <ul class="contact_info_list">
+          <li>
+            <img class="contact_info_icon" src="assets/images/whatsapp-icon.png" alt="">
+            <span class="contact_info_text"><a href="tel:+569 99885294">+569 6340 1000</a></span>
+          </li>
+          <li>
+            <img class="contact_info_icon" src="assets/images/phone-icon.png" alt="">
+            <span class="contact_info_text">+569 5372 4136</span>
+          </li>
+          <li>
+            <img class="contact_info_icon" src="assets/images/mail-icon.png" alt="">
+            <span class="contact_info_text">ventas@validay.cl</span>
+          </li>
+          <li>
+            <img class="contact_info_icon" src="assets/images/pin-icon.png" alt="">
+            <span class="contact_info_text">Santiago de Chile</span>
+          </li>
+        </ul>
+      </div>
+      <form class="contact_form">
+        <input type="text" name="firstname" placeholder="Nombre">
+        <input type="text" name="email" placeholder="E-mail">
+        <textarea id="subject" name="subject" placeholder="Asunto" style="height:200px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
     </footer>
     <script
 			  src="https://code.jquery.com/jquery-3.4.1.js"
 			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-			  crossorigin="anonymous"></script>
-        <script type="text/javascript" src="assets/js/jquery.visible.js"></script>
-    <!-- <script type="text/javascript" src="assets/js/myscript.js"></script> -->
+			  crossorigin="anonymous">
+    </script>
+
+    <!-- OWL CAROUSEL -->
+  	<script src="assets/js/owl.carousel.js" type="text/javascript"></script>
+  	<script type="text/javascript">
+  		$('.owl-carousel').owlCarousel({
+  			loop:false,
+  			margin:10,
+  			nav:true,
+  			responsive:{
+  					0:{
+  							items:1
+  					},
+  					600:{
+  							items:2
+  					},
+  					1000:{
+  							items:3
+  					}
+  			}
+  		})
+  	</script>
+
+    <script type="text/javascript" src="assets/js/myscript.js"></script>
   </body>
 </html>

@@ -15,68 +15,476 @@ a {
   color: inherit;
 }
 
-main {
-  height: 100vh;
-  color: #fff;
+ul {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+.tablet {
+  display: none;
+}
+
+.laptop {
+  display: none;
+}
+
+/* MENU */
+
+/* hamburger menu icon */
+
+.menu_responsive-hide {
+	transition: 0.5s;
+	opacity: 0;
+  	transform: translateY(-60px);
+}
+
+.menu_responsive-show {
+	transition: 0.5s;
+  	top: 0px;
+}
+
+.hamburger_div {
+  z-index: 99;
+  background-color: #718696;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+.hamburger_logo {
+  width: 80px;
+}
+
+.hamburger {
+  display: block;
+  top: 20px;
+  left: 15px;
+  position: absolute;
+}
+
+.hamburger_icon {
+  width: 36px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Hamburger icons animation */
+
+.hamburger_icon_one {
+  transform-origin: center center;
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.hamburger_icon_two {
+  opacity: 0;
+}
+
+.hamburger_icon_three {
+  transform-origin: center center;
+  transform: rotate(-45deg) translateY(-6px) translateX(6px);
+}
+
+/* menu hidden */
+
+.menu {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  background-color: #718696;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  justify-content: center;
+  transform: translateX(-100vw);
+  transition: 0.4s;
+}
+
+/* menu show */
+
+.menu_show {
+  transform: translateX(0vw);
+}
+
+.menu a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin: 25px 0;
+}
+
+.ig_menu {
+  width: 30px;
+}
+
+
+/* MAIN */
+
+.header {
   background-image: url('../images/landing-res.jpg');
-  padding: 10vh 10vw;
-  text-align: center;
-}
-
-.header-logo {
-  width: 60vw;
-}
-
-main h1 {
-  margin: 0;
-}
-
-.landing-contact {
+  background-size: cover;
+  background-repeat: none;
+  background-position: center center;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
 }
 
-.contact-item {
+.next-section {
+  position: absolute;
+  bottom: 30px;
+}
+
+.next-section img {
+  width: 50px;
+}
+
+/* SOMOS SECTION */
+
+
+.somos_section {
+
+}
+
+.somos_text {
+  background-color: #F3F5F9;
+  padding: 30px;
   text-align: center;
 }
 
-.contact-icons {
-  width: 60px;
+.somos_text h2 {
+  color: #718696;
+  font-weight: 400;
+  font-size: 1.8rem;
 }
 
-.contact-item p {
+.somos_text p {
+  color: #3E3F3C;
+  font-weight: 300;
   font-size: 0.8rem;
 }
 
+.rubros {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 0;
+}
 
-/* media query for laptop & desktops */
+.rubros_item {
+  width: 48%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 20px;
+  color: #fff;
+  height: 350px;
+  margin: 1%;
+}
 
-@media screen and (min-width: 1100px) {
+.rubros_item img {
+  width: 80px;
+}
 
-  main {
-    background-image: url('../images/landing.jpg');
-  }
+.rubros_item h4 {
+  margin: 0;
+  position: absolute;
+  bottom: 15px;
+}
 
-  .header-logo {
-    width: 300px;
-  }
+.supermercado {
+  background-image: url('../images/super-bkg.jpg');
+}
 
-  main h1 {
-    font-size: 3.5rem;
-  }
+.hospital {
+  background-image: url('../images/hospital-bkg.jpg');
+}
 
-  .landing-contact {
-    width: 30%;
-  }
+.retail {
+  background-image: url('../images/retail-bkg.jpg');
+}
 
+.mineria {
+  background-image: url('../images/mineria-bkg.jpg');
+}
+
+.transporte {
+  background-image: url('../images/transporte-bkg.jpg');
+}
+
+/* TECNOLOGIA SECTION */
+
+.tecnologia_section {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: stretch; */
+  /* align-items: stretch; */
+}
+
+.tecnologia_left {
+  background-color: #F3F5F9;
+  padding: 40px 8vw;
+}
+
+.tecnologia_left h2 {
+  color: #718696;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+.tecnologia_subtitle {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.tecnologia_subtitle p {
+  background-color: #718696;
+  color: #fff;
+  padding: 5px 0;
+  margin: 0;
+}
+
+.tecnologia_subtitle-triangle {
+  display: block;
+  position: absolute;
+  left: 46%;
+
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #718696;
+}
+
+.tecnologia_list {
+  padding: 45px 0 0 0;
+}
+
+.tecnologia_list_item {
+  margin: 10px 0;
+}
+
+.check-list-icon {
+  width: 30px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.tecnologia_right {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url('../images/tecnologia-right-bkg.jpg');
+  /* align-self: stretch; */
+  height: 70vh;
+}
+
+
+
+/* PRODUCTOS */
+
+.products_section {
+  margin: 60px 0;
+}
+
+.product_title {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.nanocobre .product_title {
+  background-color: #D08E54;
+}
+
+.accesorios .product_title {
+  background-color: #B7C4C4;
+}
+
+.insumos .product_title {
+  background-color: #5591CD;
+}
+
+/* OWL SLIDE */
+
+.product_slide {
+	text-align: center;
+  padding-top: 30px;
+}
+
+.product_slide-title {
+  text-transform: uppercase;
+	font-size: 1.2rem;
+  font-weight: 400;
+	margin: 0px;
+	color: #718696;
+	margin-bottom: 5px;
+}
+
+.product_slide-division {
+	width: 50%;
+	height: 5px;
+	margin: 15px auto 0 auto;
+}
+
+.nanocobre .product_slide-division {
+	background-color: #D08E54;
+}
+
+.accesorios .product_slide-division {
+	background-color: #B7C4C4;
+}
+
+.insumos .product_slide-division {
+	background-color: #5591CD;
+}
+
+.product_slide-img {
+	width: 100%;
+}
+
+.sku {
+  color: #3E3F3C;
+  font-size: 1.2rem;
+}
+
+
+/* OWL ARROWS */
+
+
+.owl-prev {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    display: block !important;
+    border:0px solid black;
+}
+
+.owl-next {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    display: block !important;
+    border:0px solid black;
+}
+.owl-prev i, .owl-next i {transform : scale(1,6); color: #ccc;}
+
+
+/* RESPALDADOS */
+
+.respaldados {
+  background-color: #F3F5F9;
+  padding: 30px 5vw;
+  text-align: center;
+}
+
+.respaldados h2 {
+  color: #718696;
+  font-weight: 400;
+}
+
+.respaldo_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.respaldo_flex img {
+  width: 60%;
+}
+
+/* PAGINA CONTACTO */
+
+.contact_front {
+  background-color: #232223;
+}
+
+.contact_info {
+  text-align: center;
+  padding: 100px 0 50px 0;
+}
+
+.contact_info_title {
+  color: #fff;
+}
+
+.contact_info_list {
+  list-style-type: none;
+  text-align: left;
+}
+
+.contact_info_icon {
+  width: 25px;
+}
+
+.contact_info_text {
+  color: #fff;
+  font-size: 0.7rem;
+  margin-left: 15px;
+}
+
+/* CONTACT FORM */
+
+.contact_form {
+  padding: 50px 10% 100px 10%;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: rgb(121,205,203);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: rgb(94,188,184);
 }

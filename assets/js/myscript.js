@@ -95,6 +95,16 @@ $('a[href^="#"]').on('click', function(event) {
 			    }
 			})
 
+      $(window).on('load', function(){
+        if ( $(window).scrollTop() >= sectionOne.top + 300) {
+          // ABAJO
+              $('.laptop_menu_logo-white').addClass('logo-hide');
+              $('.laptop_menu_logo_div').addClass('logo-small');
+              $('.menu').addClass('menu-scroll');
+              $('.menu-link').addClass('menu-link-scroll');
+			    }
+      })
+
 
       // PRODUCT TAB
 
@@ -105,24 +115,44 @@ $('a[href^="#"]').on('click', function(event) {
 
       $(window).on('load', function(){
         nano.addClass('product_show');
+        $('.nanocobre_button').children('.products_button_title').addClass('products_button_title-active');
+        $('.nanocobre_button').children('.triangle').addClass('triangle-show');
       })
 
       $('#nanoButt').on('click', function(){
         $(nano).addClass('product_show');
         $(acces).removeClass('product_show');
         $(insu).removeClass('product_show');
+        $('.nanocobre_button').children('.products_button_title').addClass('products_button_title-active');
+        $('.accesorios_button').children('.products_button_title').removeClass('products_button_title-active');
+        $('.insumos_button').children('.products_button_title').removeClass('products_button_title-active');
+        $(this).children('.triangle').addClass('triangle-show');
+        $('.accesorios_button').children('.triangle').removeClass('triangle-show');
+        $('.insumos_button').children('.triangle').removeClass('triangle-show');
       });
 
       $('#accesButt').on('click', function(){
         $(nano).removeClass('product_show');
         $(acces).addClass('product_show');
         $(insu).removeClass('product_show');
+        $('.nanocobre_button').children('.products_button_title').removeClass('products_button_title-active');
+        $('.accesorios_button').children('.products_button_title').addClass('products_button_title-active');
+        $('.insumos_button').children('.products_button_title').removeClass('products_button_title-active');
+        $('.nanocobre_button').children('.triangle').removeClass('triangle-show');
+        $(this).children('.triangle').addClass('triangle-show');
+        $('.insumos_button').children('.triangle').removeClass('triangle-show');
       });
 
       $('#insuButt').on('click', function(){
         $(nano).removeClass('product_show');
         $(acces).removeClass('product_show');
         $(insu).addClass('product_show');
+        $('.nanocobre_button').children('.products_button_title').removeClass('products_button_title-active');
+        $('.accesorios_button').children('.products_button_title').removeClass('products_button_title-active');
+        $('.insumos_button').children('.products_button_title').addClass('products_button_title-active');
+        $('.nanocobre_button').children('.triangle').removeClass('triangle-show');
+        $('.accesorios_button').children('.triangle').removeClass('triangle-show');
+        $(this).children('.triangle').addClass('triangle-show');
       });
 
 	  }

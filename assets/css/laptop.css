@@ -52,7 +52,7 @@
   }
 
   .menu-scroll {
-    background-color: #fff;
+    background-color: #F2F2F2;
     height: 80px;
     padding: 0 20vw 0 30vw;
   }
@@ -164,27 +164,87 @@
 
   .products_button {
     width: 70px;
-    height: 33vh;
+    height: 33.3vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
+    cursor: pointer;
+    transition: 0.4s;
   }
 
-  .products_button h3 {
+  .products_button_title {
     transform: rotate(-90deg);
+    font-weight: 400;
+    transition: 0.4;
+  }
+
+  .products_button_title-active {
+    font-weight: 600;
+    font-size: 1.5rem;
   }
 
   .nanocobre_button {
     background-color: #D08E54;
   }
 
+  .nanocobre_button:hover {
+    background-color: #BC723B;
+  }
+
   .accesorios_button {
     background-color: #B7C4C4;
   }
 
+  .accesorios_button:hover {
+    background-color: #8CAFAE;
+  }
+
   .insumos_button {
     background-color: #5591CD;
+  }
+
+  .insumos_button:hover {
+    background-color: #2F75AF;
+  }
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    right: -29px;
+    position: absolute;
+    opacity: 0;
+    transition: 0.4s;
+  }
+
+  .triangle-show {
+    opacity: 1;
+  }
+
+  .nanocobre_button .triangle {
+    border-left: 30px solid #D08E54;
+  }
+
+  .nanocobre_button:hover .triangle {
+    border-left: 30px solid #BC723B;
+  }
+
+  .accesorios_button .triangle {
+    border-left: 30px solid #B7C4C4;
+  }
+
+  .accesorios_button:hover .triangle {
+    border-left: 30px solid #8CAFAE;
+  }
+
+  .insumos_button .triangle {
+    border-left: 30px solid #5591CD;
+  }
+
+  .insumos_button:hover .triangle {
+    border-left: 30px solid #2F75AF;
   }
 
   .product_category {

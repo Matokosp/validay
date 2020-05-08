@@ -116,7 +116,7 @@ h1 {
   transform: translateX(0vw);
 }
 
-.menu a {
+.menu-link {
   color: #fff;
   font-size: 1.5rem;
   text-transform: uppercase;

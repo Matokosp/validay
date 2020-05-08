@@ -21,27 +21,20 @@
     transition: 0.4s;
   }
 
+  .logo-small {
+    width: 85px;
+    top: 15px;
+  }
+
   .laptop_menu_logo {
     width: 100%;
     position: absolute;
-  }
-
-  .laptop_menu_logo-color {
-    opacity: 1;
-    width: 100%;
     transition: 0.4s;
   }
 
-  .laptop_menu_logo_div--scroll {
-    width: 80px;
-    left: 20px;
-    top: -50px;
-  }
-
-  .laptop_menu_logo-color--scroll {
+  .logo-hide {
     opacity: 0;
   }
-
 
   .hamburger_div {
     display: none;
@@ -58,20 +51,27 @@
     transition: 0.4s;
   }
 
-  .menu a {
+  .menu-scroll {
+    background-color: #fff;
+    height: 80px;
+    padding: 0 20vw 0 30vw;
+  }
+
+  .menu-link {
+    font-weight: 400;
     text-align: center;
     width: 25%;
     font-size: 1rem;
+  }
+
+  .menu-link-scroll {
+    color: #3E3F3C;
   }
 
   .menu_small {
     padding: 0 15vw;
     width: 70vw;
     height: 60px;
-  }
-
-  .menu_scroll-hide {
-    transform: translateY(-60px);
   }
 
   /* MAIN */
@@ -150,6 +150,65 @@
     height: auto;
   }
 
+  /* PRODUCTS SECTION */
+
+  .products_section {
+    height: 100vh;
+    position: relative;
+    margin: 0;
+  }
+
+  .products_nav {
+    position: absolute;
+  }
+
+  .products_button {
+    width: 70px;
+    height: 33vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+
+  .products_button h3 {
+    transform: rotate(-90deg);
+  }
+
+  .nanocobre_button {
+    background-color: #D08E54;
+  }
+
+  .accesorios_button {
+    background-color: #B7C4C4;
+  }
+
+  .insumos_button {
+    background-color: #5591CD;
+  }
+
+  .product_category {
+    position: absolute;
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15vw;
+    opacity: 0;
+    transition: 0.4s;
+  }
+
+  .product_show {
+    opacity: 1;
+  }
+
+  .product_title {
+    display: none;
+  }
+
+
+
   /* RESPALDADOS SECTION */
 
   .respaldados {
@@ -214,6 +273,43 @@
     justify-content: center;
     width: 50%;
     height: 80vh;
+  }
+
+}
+
+/* media query for laptop & desktops */
+
+@media screen and (min-width: 1440px) {
+
+  /* SOMOS SECTION */
+
+  .somos_text {
+    padding: 80px 30vw;
+  }
+
+  .somos_text h2 {
+    font-size: 2.7rem;
+  }
+
+  .somos_text p {
+    font-size: 1.1rem;
+  }
+
+  /* RUBROS SECTION */
+
+  .rubros {
+    padding: 40px 0 120px 0;
+  }
+
+  .rubros_item {
+    width: 17%;
+    margin: 0.5%;
+    height: 460px;
+  }
+
+  .rubros_item h4 {
+    bottom: 30px;
+    font-size: 1.4rem;
   }
 
 }

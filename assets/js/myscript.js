@@ -71,44 +71,59 @@ $('a[href^="#"]').on('click', function(event) {
   // ---------------------------------
 
 
-	var x = window.matchMedia("(min-width: 1200px)")
+	var x = window.matchMedia("(min-width: 1100px)")
 
 	function myFunction(x) {
 	  if (x.matches) { // If media query matches
 
 	  		var windowHeight = $( window ).height();
 	  		var position = $(window).scrollTop();
-	  		// SCROLL UP & DOWN
-		    $(window).scroll(function() {
-			    var scroll = $(window).scrollTop();
-			    if( scroll > position ) {
-            // HACIA ABAJO
-
-			    }
-			    if( scroll < position ) {
-            // HACIA ARRIBA
-
-			    }
-			    position = scroll;
-			});
-
-      $( document ).ready(function() {
-        if ($(window).scrollTop() >= sectionTwo.top * 1 / 2) {
-
-
-        }
-      });
 
 			$(window).scroll(function(){
-				if ( $(window).scrollTop() >= sectionTwo.top * 1 / 2) {
+				if ( $(window).scrollTop() >= sectionOne.top + 300) {
           // ABAJO
-
-          
+              $('.laptop_menu_logo-white').addClass('logo-hide');
+              $('.laptop_menu_logo_div').addClass('logo-small');
+              $('.menu').addClass('menu-scroll');
+              $('.menu-link').addClass('menu-link-scroll');
 			    } else {
             // ARRIBA
-
+            $('.laptop_menu_logo-white').removeClass('logo-hide');
+            $('.laptop_menu_logo_div').removeClass('logo-small');
+            $('.menu').removeClass('menu-scroll');
+            $('.menu-link').removeClass('menu-link-scroll');
 			    }
 			})
+
+
+      // PRODUCT TAB
+
+      var nano = $('#nanocobre');
+      var acces = $('#accesorios');
+      var insu = $('#insumos');
+
+
+      $(window).on('load', function(){
+        nano.addClass('product_show');
+      })
+
+      $('#nanoButt').on('click', function(){
+        $(nano).addClass('product_show');
+        $(acces).removeClass('product_show');
+        $(insu).removeClass('product_show');
+      });
+
+      $('#accesButt').on('click', function(){
+        $(nano).removeClass('product_show');
+        $(acces).addClass('product_show');
+        $(insu).removeClass('product_show');
+      });
+
+      $('#insuButt').on('click', function(){
+        $(nano).removeClass('product_show');
+        $(acces).removeClass('product_show');
+        $(insu).addClass('product_show');
+      });
 
 	  }
 	}

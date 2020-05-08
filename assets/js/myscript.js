@@ -62,6 +62,8 @@ $('a[href^="#"]').on('click', function(event) {
 	var sectionOne = $('#sectionOne').offset();
 	var sectionTwo = $('#sectionTwo').offset();
   var sectionThree = $('#sectionThree').offset();
+  var sectionFour = $('#sectionFour').offset();
+  var sectionFive = $('#sectionFive').offset();
 	var position = $(window).scrollTop();
 
 
@@ -71,13 +73,47 @@ $('a[href^="#"]').on('click', function(event) {
   // ---------------------------------
 
 
-	var x = window.matchMedia("(min-width: 1100px)")
+	var x = window.matchMedia("(min-width: 1100px)");
 
 	function myFunction(x) {
 	  if (x.matches) { // If media query matches
 
 	  		var windowHeight = $( window ).height();
 	  		var position = $(window).scrollTop();
+
+
+
+        // MENU CHANGE
+
+        $(window).on('scroll', function(){
+
+          if($(window).scrollTop() >= sectionTwo.top - 100) {
+            $('.menu').children('a:nth-child(1)').addClass('menu-active');
+            $('.menu').children('a:nth-child(2)').removeClass('menu-active');
+          } else {
+            $('.menu').children('a:nth-child(1)').removeClass('menu-active');
+          }
+
+          if($(window).scrollTop() >= sectionThree.top - 100) {
+            $('.menu').children('a:nth-child(1)').removeClass('menu-active');
+            $('.menu').children('a:nth-child(2)').addClass('menu-active');
+            $('.menu').children('a:nth-child(3)').removeClass('menu-active');
+          }
+
+          if($(window).scrollTop() >= sectionFour.top - 100) {
+            $('.menu').children('a:nth-child(2)').removeClass('menu-active');
+            $('.menu').children('a:nth-child(3)').addClass('menu-active');
+            $('.menu').children('a:nth-child(4)').removeClass('menu-active');
+          }
+
+          if($(window).scrollTop() >= sectionFive.top - 200) {
+            $('.menu').children('a:nth-child(3)').removeClass('menu-active');
+            $('.menu').children('a:nth-child(4)').addClass('menu-active');
+            $('.menu').children('a:nth-child(5)').removeClass('menu-active');
+          }
+
+        })
+
 
 			$(window).scroll(function(){
 				if ( $(window).scrollTop() >= sectionOne.top + 300) {

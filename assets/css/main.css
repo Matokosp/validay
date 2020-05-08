@@ -274,7 +274,6 @@ h1 {
   display: block;
   position: absolute;
   left: 46%;
-
   width: 0;
   height: 0;
   border-left: 20px solid transparent;
@@ -428,38 +427,48 @@ h1 {
 
 /* PAGINA CONTACTO */
 
-.contact_front {
-  background-color: #232223;
+.contact_section {
+
 }
 
 .contact_info {
+  background-color: #718696;
   text-align: center;
-  padding: 100px 0 50px 0;
+  padding: 50px 0 50px 0;
 }
 
 .contact_info_title {
+  margin: 0 0 20px 0;
   color: #fff;
 }
 
 .contact_info_list {
   list-style-type: none;
   text-align: left;
+  vertical-align: middle;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.contact_info_list li {
+  margin-bottom: 10px;
 }
 
 .contact_info_icon {
-  width: 25px;
+  width: 30px;
+  vertical-align: middle;
 }
 
 .contact_info_text {
   color: #fff;
   font-size: 0.7rem;
-  margin-left: 15px;
+  margin-left: 35px;
 }
 
 /* CONTACT FORM */
 
 .contact_form {
-  padding: 50px 10% 100px 10%;
+  padding: 50px 10%;
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -476,7 +485,7 @@ input[type=text], select, textarea {
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-  background-color: rgb(121,205,203);
+  background-color: #718696;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -486,5 +495,40 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: rgb(94,188,184);
+  background-color: #A8C9DD;
+}
+
+
+@media screen and (min-width: 800px) {
+
+.somos_text {
+  padding: 40px 20vw;
+}
+
+.somos_text h2 {
+  margin-top: 0;
+}
+
+.somos_text p {
+    font-size: 0.9rem;
+}
+
+.rubros {
+  align-items: center;
+  justify-content: center;
+}
+
+.rubros_item {
+  width: 30%;
+}
+
+.respaldo_flex {
+  flex-direction: row;
+}
+
+.respaldo_flex img {
+  width: 40%;
+}
+
+
 }

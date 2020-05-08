@@ -26,8 +26,8 @@
   </head>
   <body>
     <div class="laptop_menu_logo_div laptop">
-      <img class="laptop_menu_logo laptop_menu_logo-white" src="assets/images/xtreme_logo_white.png" alt="">
-      <img class="laptop_menu_logo laptop_menu_logo-color" src="assets/images/xtreme_logo.png" alt="">
+      <img class="laptop_menu_logo laptop_menu_logo-color" src="assets/images/validay-logo-color.png" alt="">
+      <img class="laptop_menu_logo laptop_menu_logo-white" src="assets/images/validay-logo.png" alt="">
     </div>
     <div class="hamburger_div">
       <img class="hamburger_logo" src="assets/images/validay-logo.png" alt="validay">
@@ -38,10 +38,10 @@
       </ul>
     </div>
     <nav class="menu" id="menu">
-      <a href="#sectionOne">SOMOS</a>
-      <a href="#sectionTwo">TECNOLOGÍA</a>
-      <a href="#sectionThree">PRODUCTOS</a>
-      <a href="#sectionFour">CONTÁCTANOS</a>
+      <a class="menu-link" href="#sectionOne">SOMOS</a>
+      <a class="menu-link" href="#sectionTwo">TECNOLOGÍA</a>
+      <a class="menu-link" href="#sectionThree">PRODUCTOS</a>
+      <a class="menu-link" href="#sectionFour">CONTÁCTANOS</a>
     </nav>
     <main>
       <header id="sectionOne" class="header">
@@ -244,8 +244,9 @@
         </div>
       </section>
     </main>
-    <footer class="contact_front">
+    <footer class="contact_section">
       <div class="contact_info">
+        <img class="transparent-logo" src="assets/images/day-transparent.png" alt="">
         <h2 class="contact_info_title">Cotiza tus productos</h2>
         <ul class="contact_info_list">
           <li>
@@ -268,8 +269,9 @@
       </div>
       <form class="contact_form">
         <input type="text" name="firstname" placeholder="Nombre">
+        <input type="text" name="empresa" placeholder="Empresa">
         <input type="text" name="email" placeholder="E-mail">
-        <textarea id="subject" name="subject" placeholder="Asunto" style="height:200px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Mensaje" style="height:200px"></textarea>
         <input type="submit" value="Submit">
       </form>
     </footer>

@@ -12,90 +12,57 @@ window.addEventListener('resize', () => {
 });
 
 
-// MENU
+// SCROLL WINDOW TO ID
 
+$('a[href^="#"]').on('click', function(event) {
+		var target = $(this.getAttribute('href'));
+		if( target.length ) {
+				event.preventDefault();
+				$('html, body').stop().animate({
+						scrollTop: target.offset().top
+				}, 1000);
+		}
+});
 
-var navButton = document.getElementById("navButton");
-var menuResponsive = document.getElementById("menu");
-var hambIconOne = document.getElementById("hambIconOne");
-var hambIconTwo = document.getElementById("hambIconTwo");
-var hambIconThree = document.getElementById("hambIconThree");
+// Menu Slide
 
-function displayNav() {
+	var menuHideShow = $('.menu').hasClass('menu_show');
 
-if (menuResponsive.classList) {
-  menuResponsive.classList.toggle("menu_show");
-  hambIconOne.classList.toggle("hamburger_icon_one");
-  hambIconTwo.classList.toggle("hamburger_icon_two");
-  hambIconThree.classList.toggle("hamburger_icon_three");
-} else {
-  // crossborwser For IE9
-  // according to w3 schools
-  // I've never personally used this method
-  var classes = menuResponsive.className.split(" ");
-  var i = classes.indexOf("menu_show");
+	function desplazar (){
+		$('.menu').toggleClass('menu_show');
+    $('.hamburger_div').toggleClass('hamburger_div-slide');
+		$('#hambIconOne').toggleClass('hamburger_icon_one');
+		$('#hambIconTwo').toggleClass('hamburger_icon_two');
+		$('#hambIconThree').toggleClass('hamburger_icon_three');
+		// $('.menuicon').toggleClass('menuicon-black');
+	}
+	$('.hamburger_div').on('click', function(e){
+		desplazar();
+		e.stopPropagation();
+		menuHideShow = $('.menu').hasClass('menu_show');
+		console.log(menuHideShow)
+	})
 
-  if (i >= 0)
-    classes.splice(i, 1);
-  else
-    classes.push("menu_show");
-    menuResponsive.className = classes.join(" ");
-}
-}
-
-navButton.onclick = displayNav;
-
+	window.addEventListener('click', function(e){
+		if (menuHideShow = true && e.target.className != 'menu menu_show') {
+			$('.menu').removeClass('menu_show');
+			$('.hamburger_div').removeClass('hamburger_div-slide');
+			$('#hambIconOne').removeClass('hamburger_icon_one');
+			$('#hambIconTwo').removeClass('hamburger_icon_two');
+			$('#hambIconThree').removeClass('hamburger_icon_three');
+			// $('.menuicon').removeClass('menuicon-black');
+			// e.stopPropagation();
+		}
+		console.log(e.target)
+	})
 
 
 // MENU STYLE
 
-// if (document.location.pathname == "about.html") {
-//     console.log(document.URL);
-// }
 	var sectionOne = $('#sectionOne').offset();
 	var sectionTwo = $('#sectionTwo').offset();
   var sectionThree = $('#sectionThree').offset();
 	var position = $(window).scrollTop();
-
-	// should start at 0
-
-	$(window).scroll(function() {
-	    var scroll = $(window).scrollTop();
-	    if( scroll > position ) {
-	        console.log('scrollDown');
-	        $('.hamburger_div').removeClass('menu_responsive-show');
-	        $('.hamburger_div').addClass('menu_responsive-hide');
-	    }
-
-	    if( scroll < position ) {
-	    	$('.hamburger_div').removeClass('menu_responsive-hide');
-	    	$('.hamburger_div').addClass('menu_responsive-show');
-	        console.log('scrollUp');
-	    }
-
-      if( $('#menu').hasClass('menu_show') ) {
-        if( scroll < position ) {
-  	    	$('.hamburger_div').removeClass('menu_responsive-hide')
-  	    	$('.hamburger_div').addClass('menu_responsive-show');
-  	    }
-      }
-	    // else {
-	    //      console.log('scrollUp');
-	    // }
-	    position = scroll;
-	});
-
-  $(window).scroll(function(){
-    if ( $(window).scrollTop() >= sectionTwo.top * 1 / 2) {
-      // ABAJO
-        // $('.hamburger_div').addClass('menu_responsive-show');
-
-      } else {
-        // ARRIBA
-        $('.hamburger_div').removeClass('menu_responsive-hide');
-      }
-  })
-
 
 
 
@@ -116,53 +83,32 @@ navButton.onclick = displayNav;
 			    var scroll = $(window).scrollTop();
 			    if( scroll > position ) {
             // HACIA ABAJO
-			        $('.menu').addClass('menu_scroll-hide');
-              $('.laptop_menu_logo_div').addClass('laptop_menu_logo_div--scroll');
-              $('.laptop_menu_logo-color').addClass('laptop_menu_logo-color--scroll');
+
 			    }
 			    if( scroll < position ) {
             // HACIA ARRIBA
-			    	$('.menu').removeClass('menu_scroll-hide');
-            // $('.laptop_menu_logo_div').removeClass('laptop_menu_logo_div--scroll');
-            // $('.laptop_menu_logo-color').removeClass('laptop_menu_logo-color--scroll');
+
 			    }
 			    position = scroll;
 			});
 
       $( document ).ready(function() {
         if ($(window).scrollTop() >= sectionTwo.top * 1 / 2) {
-          $('.laptop_menu_logo_div').addClass('laptop_menu_logo_div--scroll');
-          $('.laptop_menu_logo-color').addClass('laptop_menu_logo-color--scroll');
-          $('.menu').css({
-          'padding': '0 15vw',
-          'width': '70vw',
-          'height': '60px'
-        });
+
+
         }
       });
 
 			$(window).scroll(function(){
 				if ( $(window).scrollTop() >= sectionTwo.top * 1 / 2) {
           // ABAJO
-			    	$('.menu').css({
-            'padding': '0 15vw',
-            'width': '70vw',
-            'height': '60px'
-          });
+
+          
 			    } else {
             // ARRIBA
-            $('.laptop_menu_logo_div').removeClass('laptop_menu_logo_div--scroll');
-            $('.laptop_menu_logo-color').removeClass('laptop_menu_logo-color--scroll');
+
 			    }
 			})
-
-      $(window).scroll(function() {
-        if ($(window).scrollTop() >= sectionThree.top - 150) {
-          $('.go_white').addClass('onthego_title_white');
-        } else {
-          $('.go_white').removeClass('onthego_title_white');
-        }
-      });
 
 	  }
 	}

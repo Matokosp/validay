@@ -14,9 +14,9 @@
 
   .laptop_menu_logo_div {
     position: fixed;
-    width: 160px;
+    width: 250px;
     z-index: 99;
-    left: 20vw;
+    left: 10vw;
     top: 30px;
     transition: 0.4s;
   }
@@ -48,19 +48,20 @@
   }
 
   .menu {
+    background-color: transparent;
     transform: translateX(0);
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
     height: 150px;
-    padding: 0 30vw;
-    width: 40vw;
+    padding: 0 10vw 0 40vw;
+    width: 100vw;
     transition: 0.4s;
   }
 
   .menu a {
     text-align: center;
     width: 25%;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .menu_small {
@@ -72,3 +73,147 @@
   .menu_scroll-hide {
     transform: translateY(-60px);
   }
+
+  /* MAIN */
+
+  .header {
+    background-image: url('../images/landing.jpg');
+  }
+
+  .header h1 {
+    font-size: 3rem;
+  }
+
+  /* SOMOS SECTION */
+
+  .somos_text {
+    padding: 70px 30vw;
+  }
+
+  .somos_text p {
+    font-size: 1rem;
+  }
+
+  /* RUBROS SECTION */
+
+  .rubros {
+    padding: 50px 0 120px 0;
+  }
+
+  .rubros_item {
+    width: 18%;
+    margin: 1%;
+    height: 380px;
+  }
+
+  .rubros_item h4 {
+    bottom: 20px;
+    font-size: 1.2rem;
+  }
+
+  /* TECNOLOGIA SECTION */
+
+  .tecnologia_section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tecnologia_left {
+    height: 90vh;
+    width: 50%;
+    padding: 0 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tecnologia_left h2 {
+    font-size: 2.6rem;
+  }
+
+  .tecnologia_list_item {
+    margin: 15px 0;
+  }
+
+  .check-list-icon {
+    width: 35px;
+    margin-right: 10px;
+  }
+
+  .tecnologia_list_item span {
+    font-size: 1.4rem;
+  }
+
+  .tecnologia_right {
+    width: 50%;
+    height: auto;
+  }
+
+  /* RESPALDADOS SECTION */
+
+  .respaldados {
+    padding: 110px 15vw;
+  }
+
+  .respaldados h2 {
+    font-size: 2.5rem;
+  }
+
+  /* CONTACTO SECTION */
+
+  .contact_section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .transparent-logo {
+    position: absolute;
+    left: -10px;
+    bottom: -10px;
+  }
+
+  .contact_info_title {
+    font-weight: 400;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+  }
+
+  .contact_info_list {
+    list-style-type: none;
+    text-align: left;
+    vertical-align: middle;
+    width: 60%;
+    margin-left: 0;
+  }
+
+  .contact_info_icon {
+    width: 70px;
+  }
+
+  .contact_info_text {
+    font-size: 1.5rem;
+  }
+
+  .contact_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 80vh;
+  }
+
+}

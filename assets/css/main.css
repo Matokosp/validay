@@ -444,6 +444,7 @@ h1 {
   left: -10px;
   position: absolute;
   width: 80%;
+  z-index: 1;
 }
 
 .contact_info_title {
@@ -457,6 +458,8 @@ h1 {
   vertical-align: middle;
   width: 50%;
   margin-left: 25%;
+  position: relative;
+  z-index: 50;
 }
 
 .contact_info_list li {
@@ -468,10 +471,14 @@ h1 {
   vertical-align: middle;
 }
 
+.transparent {
+  display: none;
+}
+
 .contact_info_text {
   color: #fff;
   font-size: 0.7rem;
-  margin-left: 35px;
+  margin-left: 25px;
 }
 
 /* CONTACT FORM */

@@ -313,7 +313,7 @@
   .contact_info_title {
     font-weight: 400;
     font-size: 3.5rem;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
 
   .contact_info_list {
@@ -324,11 +324,37 @@
     margin-left: 0;
   }
 
+  .contact_info_list li {
+    margin-bottom: 60px;
+  }
+
+  .contact_info_list li a {
+    position: relative;
+  }
+
+  .transparent {
+    display: block;
+    opacity: 0;
+  }
+
+  .contact_link:hover .white {
+    opacity: 0;
+  }
+
+  .contact_link:hover .transparent {
+    opacity: 1;
+  }
+
   .contact_info_icon {
-    width: 70px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 60px;
+    transition: 0.4s;
   }
 
   .contact_info_text {
+    margin-left: 90px;
     font-size: 1.5rem;
   }
 

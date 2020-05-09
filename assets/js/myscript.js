@@ -191,6 +191,18 @@ $('a[href^="#"]').on('click', function(event) {
         $(this).children('.triangle').addClass('triangle-show');
       });
 
+      // CONTACT HOVER
+
+      // var contactLink = $('.contact_list');
+      //
+      // $(contactLink).on('hover', function(){
+      //   $(this).children('.white)').addClass('hide');
+      // })
+      //
+      // $(contactLink).on('mouseleave', function(){
+      //   $(this).children('img:nth-child(2)').removeClass('hide');
+      // })
+
 	  }
 	}
 
